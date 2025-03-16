@@ -12,12 +12,11 @@ This project demonstrates Create, Read, Update, and Delete (CRUD) operations in 
 - Insert sample data to initialize the collection.  
 
 # Example Document Structure:  
-json
-{
-  "_id": ObjectId("123abc"),
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "age": 25
+{ <br>
+  "_id": ObjectId("123abc"),<br>
+  "name": "John Doe",<br>
+  "email": "johndoe@example.com",<br>
+  "age": 25<br>
 }
 
 # 2️⃣ Retrieve (Read) Data  
@@ -27,9 +26,9 @@ json
 
 # Example Queries:  
 
-db.Users.find(); // Fetch all users
-db.Users.find({ age: { $gt: 20 } }); // Find users above 20
-db.Users.find({}, { name: 1, email: 1 }); // Fetch only name & email
+db.Users.find(); // Fetch all users<br>
+db.Users.find({ age: { $gt: 20 } }); // Find users above 20<br>
+db.Users.find({}, { name: 1, email: 1 }); // Fetch only name & email<br>
 
 
 # 3️⃣ Update Data in the Collection  
@@ -40,8 +39,8 @@ db.Users.find({}, { name: 1, email: 1 }); // Fetch only name & email
 
 # Example Queries:  
 
-db.users.updateOne({ email: "johndoe@example.com" }, { $set: { age: 30 } });
-db.users.updateMany({ age: { $lt: 18 } }, { $set: { status: "minor" } });
+db.users.updateOne({ email: "johndoe@example.com" }, { $set: { age: 30 } });<br>
+db.users.updateMany({ age: { $lt: 18 } }, { $set: { status: "minor" } });<br>
 
 # 4️⃣ Delete Data from the Collection  
 
@@ -51,6 +50,6 @@ db.users.updateMany({ age: { $lt: 18 } }, { $set: { status: "minor" } });
 
 # Example Queries:  
 
-db.users.deleteOne({ email: "johndoe@example.com" }); // Delete one user
-db.users.deleteMany({ age: { $lt: 18 } }); // Delete all minors
-db.users.drop(); // Drop the entire collection
+db.users.deleteOne({ email: "johndoe@example.com" }); // Delete one user<br>
+db.users.deleteMany({ age: { $lt: 18 } }); // Delete all minors<br>
+db.users.drop(); // Drop the entire collection<br>

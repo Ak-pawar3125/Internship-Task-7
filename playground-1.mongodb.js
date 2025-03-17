@@ -5,10 +5,10 @@ use("myDB");
 db.Users.find();
 
 // Find a document where age is greater than 20.
-db.Users.find({ age: { $gt: 20 } }); 
+db.Users.find({ age: { $gt: 20 } });
 
 // Fetch all document's name and email only
-db.Users.find({}, { name: 1, Email: 1 }); 
+db.Users.find({}, { name: 1, Email: 1 });
 
 // upadte age of specific document
 db.Users.updateOne({ Email: "akanksha@gmail.com" }, { $set: { age: 23 } });
@@ -27,5 +27,5 @@ db.Users.deleteMany({ age: { $lt: 18 } });
 db.Users.find();
 
 // drop entire collection
-db.Users.drop(); 
+db.Users.drop();
 db.Users.find();
